@@ -7,8 +7,9 @@ public class Movement : MonoBehaviour
 {
     private Vector2 movement;
     private Rigidbody _rigidbody;
+    private bool isSprinting = false;
 
-    [SerializeField] private float moveSpeed = 5;
+    [SerializeField] public float moveSpeed = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -19,14 +20,21 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(movement.x, 0, movement.y) * moveSpeed * Time.deltaTime);
+        if (isSprinting )
+        {
+            transform.Translate(new Vector3(movement.x, 0, movement.y) * (moveSpeed * 2) * Time.deltaTime);
+        }
+        else
+        {
+            transform.Translate(new Vector3(movement.x, 0, movement.y) * moveSpeed * Time.deltaTime);
+        }
     }
 
     void OnJump(InputValue value)
     {
         if (!enabled) return;
 
-        _rigidbody.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+        _rigidbody.AddForce(new Vector3(0, 4, 0), ForceMode.Impulse);
     }
     
     void OnMove(InputValue value)
@@ -34,5 +42,12 @@ public class Movement : MonoBehaviour
         if (!enabled) return;
 
         movement = value.Get<Vector2>();
+    }
+
+    void OnSprint(InputValue value)
+    {
+        if (!enabled) return;
+
+        isSprinting = !isSprinting;
     }
 }
