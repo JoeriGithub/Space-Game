@@ -38,4 +38,5 @@ public class SC_MainMenu : MonoBehaviour
 		// Exit Game
 		Application.Quit();
 	}
+
 }
