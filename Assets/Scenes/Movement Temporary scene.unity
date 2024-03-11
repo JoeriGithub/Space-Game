@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -356,7 +356,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &688490631482659791
+--- !u!1001 &1725623066
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -366,15 +366,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6457431511090883688, guid: e954ef430ccf49a43ad3b914640a5186, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9306077
+      value: 1.4864922
       objectReference: {fileID: 0}
     - target: {fileID: 6457431511090883688, guid: e954ef430ccf49a43ad3b914640a5186, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.09
+      value: 0.99999905
       objectReference: {fileID: 0}
     - target: {fileID: 6457431511090883688, guid: e954ef430ccf49a43ad3b914640a5186, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3350842
+      value: 1.2938538
       objectReference: {fileID: 0}
     - target: {fileID: 6457431511090883688, guid: e954ef430ccf49a43ad3b914640a5186, type: 3}
       propertyPath: m_LocalRotation.w
@@ -405,9 +405,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8162055961368637061, guid: e954ef430ccf49a43ad3b914640a5186, type: 3}
-      propertyPath: m_Camera
+      propertyPath: m_Actions
       value: 
-      objectReference: {fileID: 1240337562}
+      objectReference: {fileID: -944628639613478452, guid: 46da37a430e2cb54cb968f8dd232f5eb, type: 3}
+    - target: {fileID: 8162055961368637061, guid: e954ef430ccf49a43ad3b914640a5186, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8702553211342310294, guid: e954ef430ccf49a43ad3b914640a5186, type: 3}
       propertyPath: m_Name
       value: Player
@@ -422,5 +426,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1240337563}
-  - {fileID: 688490631482659791}
   - {fileID: 1252728014}
+  - {fileID: 1725623066}

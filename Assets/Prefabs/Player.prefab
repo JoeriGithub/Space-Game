@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 2773744493857465952}
   - component: {fileID: 8162055961368637061}
   - component: {fileID: 5915854833061103717}
-  - component: {fileID: 5865942795436672970}
-  - component: {fileID: 3059962181220679663}
   - component: {fileID: 2643592715614192473}
   - component: {fileID: 2000078901045319545}
+  - component: {fileID: 7100576415829214235}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -146,34 +145,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!114 &5865942795436672970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702553211342310294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dcbd2996e0d86f4bba6d7cafb06c119, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
---- !u!114 &3059962181220679663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702553211342310294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5de38c194c1b8f4ba51e874e6fff4a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  otherScript: {fileID: 5865942795436672970}
-  standCollider: {fileID: 2643592715614192473}
-  crouchCollider: {fileID: 2000078901045319545}
 --- !u!136 &2643592715614192473
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -220,3 +191,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7100576415829214235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8702553211342310294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c1a9e9bd056394397c22804eff641e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  staan: {fileID: 2643592715614192473}
+  crouch: {fileID: 2000078901045319545}
+  playerInput: {fileID: 0}
+  rigidBody: {fileID: 0}
