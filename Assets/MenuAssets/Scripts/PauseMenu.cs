@@ -9,11 +9,15 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject PauseMenuUI;
     public GameObject ExitGameUI;
+    public GameObject SettingsUI;
 	// Update is called once per frame
 
 	private void Start()
 	{
-        Resume();
+		Time.timeScale = 1f;
+		PauseMenuUI.SetActive(false);
+		SettingsUI.SetActive(false);
+		ExitGameUI.SetActive(false);
 	}
 	void Update()
     {
@@ -55,13 +59,20 @@ public class PauseMenu : MonoBehaviour
     }
     public void YesButton()
     {
-		UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+		Time.timeScale = 1f;
+		UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenuScene");
 	}
 
     public void Settings()
     {
+        PauseMenuUI.SetActive(false);
+        SettingsUI.SetActive(true);
+    }
 
-
+    public void ReturnButton()
+    {
+        SettingsUI.SetActive(false);
+        PauseMenuUI.SetActive(true);
     }
 
 	
