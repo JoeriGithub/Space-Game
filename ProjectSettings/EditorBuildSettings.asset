@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Movement Temporary scene.unity
+    guid: a682089dd16a7784e8648867226257e1
+  - enabled: 1
+    path: Assets/Scenes/DemoScene.unity
+    guid: b9d03187ed256764991e8fd41398e304
   m_configObjects: {}
