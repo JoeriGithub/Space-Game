@@ -3,7 +3,11 @@ using UnityEngine;
 public class JumpingState : State
 {
     bool grounded;
-    float moveSpeed = 10;
+    float gravityValue;
+    float jumpHeight;
+    float playerSpeed;
+
+    Vector3 airVelocity;
  
     public JumpingState(Speler _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -16,7 +20,10 @@ public class JumpingState : State
         base.Enter();
  
         grounded = false;
-        input = Vector2.zero; 
+        gravityValue = character.gravityValue;
+        jumpHeight = character.jumpHeight;
+        playerSpeed = character.playerSpeed;
+        gravityVelocity.y = 0;
 
         Jump();
     }
@@ -39,13 +46,26 @@ public class JumpingState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        character.transform.Translate(new Vector3(input.x, 0, input.y) * moveSpeed * Time.deltaTime);
-        grounded = character.rigidBody.velocity.y == 0;
+        if (!grounded)
+        {
+ 
+            velocity = character.playerVelocity;
+            airVelocity = new Vector3(input.x, 0, input.y);
+ 
+            velocity = velocity.x * character.camera.right.normalized + velocity.z * character.camera.forward.normalized;
+            velocity.y = 0f;
+            airVelocity = airVelocity.x * character.camera.right.normalized + airVelocity.z * character.camera.forward.normalized;
+            airVelocity.y = 0f;
+            character.controller.Move(gravityVelocity * Time.deltaTime+ (airVelocity*character.airControl+velocity*(1- character.airControl))*playerSpeed*Time.deltaTime);
+        }
+ 
+        gravityVelocity.y += gravityValue * Time.deltaTime;
+        grounded = character.controller.isGrounded;
     }
  
     void Jump()
     {
-        character.rigidBody.AddForce(new Vector3(0, 4, 0), ForceMode.Impulse);
+        gravityVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
     }
  
 }

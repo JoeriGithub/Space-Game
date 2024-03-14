@@ -5,11 +5,12 @@ public class MovingState : State
     bool jump;
     bool sprint;
     float moveSpeed = 5;
+    float gravityValue;
     
     private Quaternion lookRotation;
 
-    public Vector3 forward;
-    public Vector3 right;
+    public Vector3 currentVelocity;
+    public Vector3 cVelocity;
  
     public MovingState(Speler _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -23,8 +24,7 @@ public class MovingState : State
 
         jump = false;
         sprint = false;
-        input = Vector2.zero; 
-        mouseinput = Vector2.zero;
+        input = Vector2.zero;
     }
  
     public override void HandleInput()
@@ -41,13 +41,12 @@ public class MovingState : State
         }
  
         input = moveAction.ReadValue<Vector2>();
-        mouseinput = lookAction.ReadValue<Vector2>();
 
-        forward = character.camera.transform.forward;
-        right = character.camera.transform.right;
-        
-        forward.y = 0;
-        right.y = 0;
+        velocity = new Vector3(input.x, 0, input.y);
+ 
+        velocity = velocity.x * character.camera.right.normalized + velocity.z * character.camera.forward.normalized;
+        velocity.y = 0f;
+
     }
  
     public override void LogicUpdate()
@@ -71,16 +70,16 @@ public class MovingState : State
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
- 
-        // Determine what forwards is according to the camera
-        Vector3 direction = forward * input.y + right * input.x;
 
-        Vector3 velocity = direction * moveSpeed;
+        gravityVelocity.y += gravityValue * Time.deltaTime;
 
-        character.rigidBody.velocity = velocity * Time.deltaTime;
-
-        // Move the player
-        //character.transform.Translate(velocity * Time.deltaTime, Space.World);
+        currentVelocity = Vector3.SmoothDamp(currentVelocity, velocity,ref cVelocity, character.velocityDampTime);
+        character.controller.Move(currentVelocity * Time.deltaTime * moveSpeed + gravityVelocity * Time.deltaTime);
+  
+        if (velocity.sqrMagnitude>0)
+        {
+            character.transform.rotation = Quaternion.Slerp(character.transform.rotation, Quaternion.LookRotation(velocity),character.rotationDampTime);
+        }
     }
  
     public override void Exit()

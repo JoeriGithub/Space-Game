@@ -376,14 +376,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player&Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 2959989459019098034, guid: 9eb27361c6238f9418030fc116786ea4, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2959989459019098034, guid: 9eb27361c6238f9418030fc116786ea4, type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 8267534447704622961, guid: 9eb27361c6238f9418030fc116786ea4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2360606

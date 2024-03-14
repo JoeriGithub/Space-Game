@@ -8,6 +8,8 @@ public class State
  
     protected Vector2 input;
     protected Vector2 mouseinput;
+    protected Vector3 velocity;
+    protected Vector3 gravityVelocity;
  
     public InputAction moveAction;
     public InputAction jumpAction;
