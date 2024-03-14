@@ -60,7 +60,7 @@ public class DungeonGenerator : MonoBehaviour
 
         int k = 0;
 
-        while (k < 10)
+        while (k < 1000)
         {
             k++;
 

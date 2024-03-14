@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 8136571932383896766}
   - component: {fileID: 4497152605244587582}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,8 +133,8 @@ Transform:
   m_GameObject: {fileID: 721836154872541153}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: 0.5, z: -9.5}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: -6, y: 1.5, z: -9.5}
+  m_LocalScale: {x: 8, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 2742563721620778671}
   - component: {fileID: 7502490264054464134}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -238,8 +238,8 @@ Transform:
   m_GameObject: {fileID: 1277996521202863105}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 9.500014, y: 0.5, z: 5.9999795}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: 9.5, y: 1.5, z: 5.5}
+  m_LocalScale: {x: 7, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 7378129235956637208}
   - component: {fileID: 3798460134052980244}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,8 +448,8 @@ Transform:
   m_GameObject: {fileID: 1717739861408786205}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 9.499987, y: 0.5, z: -6.000021}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: 9.5, y: 1.5, z: -5.5}
+  m_LocalScale: {x: 7, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -644,7 +644,7 @@ GameObject:
   - component: {fileID: 5661870785857891892}
   - component: {fileID: 4171915215609995425}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -659,8 +659,8 @@ Transform:
   m_GameObject: {fileID: 2494823089288626292}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: 0.5, z: 9.5}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: -6, y: 1.5, z: 9.5}
+  m_LocalScale: {x: 8, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -854,7 +854,7 @@ GameObject:
   - component: {fileID: 3568589301224665133}
   - component: {fileID: 2667767810693870263}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -869,8 +869,8 @@ Transform:
   m_GameObject: {fileID: 4446597010990181600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -9.500014, y: 0.5, z: -5.9999795}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: -9.5, y: 1.5, z: -5.5}
+  m_LocalScale: {x: 7, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -958,6 +958,7 @@ GameObject:
   - component: {fileID: 3416534491553677660}
   - component: {fileID: 6860771241845792013}
   - component: {fileID: 6027622509158868533}
+  - component: {fileID: 3772006391626753587}
   m_Layer: 0
   m_Name: Down Wall
   m_TagString: Untagged
@@ -1051,6 +1052,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3772006391626753587
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639789103717311513}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6168801309425056581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1091,7 @@ GameObject:
   - component: {fileID: 3408239960186155536}
   - component: {fileID: 6066230144614567420}
   - component: {fileID: 6089495460155423785}
+  - component: {fileID: 8422337075906522119}
   m_Layer: 0
   m_Name: Right Wall
   m_TagString: Untagged
@@ -1156,6 +1185,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8422337075906522119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6168801309425056581}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6358655143645798279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1168,6 +1224,7 @@ GameObject:
   - component: {fileID: 6830844395242598256}
   - component: {fileID: 5330909633502208663}
   - component: {fileID: 301652445358201879}
+  - component: {fileID: 3286437839086795291}
   m_Layer: 0
   m_Name: Left Wall
   m_TagString: Untagged
@@ -1261,6 +1318,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3286437839086795291
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6358655143645798279}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &6929453901919599166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,7 +1358,7 @@ GameObject:
   - component: {fileID: 5633446439832225147}
   - component: {fileID: 6884530223472302293}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1289,8 +1373,8 @@ Transform:
   m_GameObject: {fileID: 6929453901919599166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: 0.5, z: -9.5}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: 6, y: 1.5, z: -9.5}
+  m_LocalScale: {x: 8, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -1523,7 +1607,7 @@ GameObject:
   - component: {fileID: 7408145527495106920}
   - component: {fileID: 7753574187012018785}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1538,8 +1622,8 @@ Transform:
   m_GameObject: {fileID: 8155394530964340313}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -9.499987, y: 0.5, z: 6.000021}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: -9.5, y: 1.5, z: 5.5}
+  m_LocalScale: {x: 7, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -1719,7 +1803,7 @@ GameObject:
   - component: {fileID: 877199667730484026}
   - component: {fileID: 7851757450950446155}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1734,8 +1818,8 @@ Transform:
   m_GameObject: {fileID: 8450519510235295657}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6, y: 0.5, z: 9.5}
-  m_LocalScale: {x: 8, y: 1, z: 1}
+  m_LocalPosition: {x: 6, y: 1.5, z: 9.5}
+  m_LocalScale: {x: 8, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7892063192479164140}
@@ -1862,6 +1946,7 @@ GameObject:
   - component: {fileID: 5571422614336542974}
   - component: {fileID: 1705077610770295053}
   - component: {fileID: 6387250215492627896}
+  - component: {fileID: 8707487281069043901}
   m_Layer: 0
   m_Name: Up Wall
   m_TagString: Untagged
@@ -1955,3 +2040,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &8707487281069043901
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9098842010648381549}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
