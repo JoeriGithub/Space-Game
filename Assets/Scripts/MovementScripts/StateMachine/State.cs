@@ -7,11 +7,13 @@ public class State
     public StateMachine stateMachine;
  
     protected Vector2 input;
+    protected Vector2 mouseinput;
  
     public InputAction moveAction;
     public InputAction jumpAction;
     public InputAction crouchAction;
     public InputAction sprintAction;
+    public InputAction lookAction;
  
     public State(Speler _character, StateMachine _stateMachine)
     {
@@ -22,6 +24,7 @@ public class State
         jumpAction = character.playerInput.actions["Jump"];
         crouchAction = character.playerInput.actions["Crouch"];
         sprintAction = character.playerInput.actions["Sprint"];
+        lookAction = character.playerInput.actions["Look"];
     }
  
     public virtual void Enter()

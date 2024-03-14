@@ -8,10 +8,6 @@ public class Speler : MonoBehaviour
     public CapsuleCollider staan;
     [SerializeField]
     public CapsuleCollider crouch;
-    [SerializeField] 
-    private float rotationSpeed = 10;
-    [SerializeField] 
-    new private Transform camera;
 
     public StateMachine movementSM;
     public IdleState standing;
@@ -24,12 +20,15 @@ public class Speler : MonoBehaviour
     public PlayerInput playerInput;
     [HideInInspector]
     public Rigidbody rigidBody;
+    [HideInInspector]
+    public Transform camera;
  
     // Start is called before the first frame update
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
         rigidBody = GetComponent<Rigidbody>();
+        camera = GetComponent<Transform>();
  
         movementSM = new StateMachine();
         standing = new IdleState(this, movementSM);
