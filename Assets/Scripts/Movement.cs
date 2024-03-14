@@ -43,7 +43,6 @@ public class Movement : MonoBehaviour
 
         movement = value.Get<Vector2>();
     }
-
     void OnSprint(InputValue value)
     {
         if (!enabled) return;
