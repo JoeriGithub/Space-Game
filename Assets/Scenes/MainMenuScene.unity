@@ -1274,6 +1274,7 @@ MonoBehaviour:
   MainMenu: {fileID: 2034000828}
   LoadGameMenu: {fileID: 2042026178}
   SettingsMenu: {fileID: 1713839086}
+  _newGameScene: {fileID: 102900000, guid: b9d03187ed256764991e8fd41398e304, type: 3}
 --- !u!1 &936213286
 GameObject:
   m_ObjectHideFlags: 0
