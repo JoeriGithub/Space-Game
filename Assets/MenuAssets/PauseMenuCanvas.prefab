@@ -296,7 +296,7 @@ RectTransform:
   m_GameObject: {fileID: 626303829545608126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7756115202302431162}
@@ -441,7 +441,7 @@ RectTransform:
   m_GameObject: {fileID: 671247125669870905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7578989675193498649}
@@ -586,7 +586,7 @@ RectTransform:
   m_GameObject: {fileID: 824604685753533943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6980971308406827462}
@@ -1019,7 +1019,7 @@ RectTransform:
   m_GameObject: {fileID: 5831857629022072189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1848252413876560033}
@@ -1231,7 +1231,7 @@ RectTransform:
   m_GameObject: {fileID: 6198118567857753509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8197113, y: 0.8197113, z: 0.8197113}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4755687113159785915}
@@ -1366,7 +1366,7 @@ RectTransform:
   m_GameObject: {fileID: 6871030974282808649}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6504039116168216445}
@@ -1496,7 +1496,6 @@ GameObject:
   - component: {fileID: 3081988199997966869}
   - component: {fileID: 8478479699524821112}
   - component: {fileID: 2599357442464674023}
-  - component: {fileID: 664567142685371368}
   m_Layer: 5
   m_Name: PauseMenuCanvas
   m_TagString: Untagged
@@ -1563,7 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1606,14 +1605,6 @@ MonoBehaviour:
   PauseMenuUI: {fileID: 9163785451815197283}
   ExitGameUI: {fileID: 2494550810862037720}
   SettingsUI: {fileID: 5365508265769775545}
---- !u!222 &664567142685371368
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6921908866757661440}
-  m_CullTransparentMesh: 1
 --- !u!1 &7111778329148060366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1910,7 +1901,7 @@ RectTransform:
   m_GameObject: {fileID: 7902016560441384045}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7902156230312752967}
