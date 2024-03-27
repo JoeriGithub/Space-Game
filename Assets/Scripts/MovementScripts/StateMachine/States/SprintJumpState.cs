@@ -1,6 +1,6 @@
 using UnityEngine;
  
-public class JumpingState : State
+public class SprintJumpState : State
 {
     bool grounded;
     float gravityValue;
@@ -9,7 +9,7 @@ public class JumpingState : State
 
     Vector3 airVelocity;
  
-    public JumpingState(Speler _character, StateMachine _stateMachine) : base(_character, _stateMachine)
+    public SprintJumpState(Speler _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
         character = _character;
         stateMachine = _stateMachine;
@@ -62,7 +62,7 @@ public class JumpingState : State
             velocity.y = 0f;
             airVelocity = airVelocity.x * character.camera.right.normalized + airVelocity.z * character.camera.forward.normalized;
             airVelocity.y = 0f;
-            character.controller.Move(gravityVelocity * Time.deltaTime+ (airVelocity*character.airControl+velocity*(1- character.airControl))*playerSpeed*Time.deltaTime);
+            character.controller.Move(gravityVelocity * Time.deltaTime+ (airVelocity*character.airControl+velocity*(1- character.airControl))*(playerSpeed * 3)*Time.deltaTime);
         }
  
         gravityVelocity.y += gravityValue * Time.deltaTime;

@@ -18,6 +18,7 @@ public class Speler : MonoBehaviour
     public CrouchingState crouching;
     public SprintState sprinting;
     public MovingState moving;
+    public SprintJumpState sprintJump;
 
     [Range(0, 1)]
     public float velocityDampTime = 0.9f;
@@ -28,8 +29,6 @@ public class Speler : MonoBehaviour
  
     [HideInInspector]
     public PlayerInput playerInput;
-    //[HideInInspector]
-    //public Rigidbody rigidBody;
     [HideInInspector]
     public CharacterController controller;
     [HideInInspector]
@@ -44,7 +43,6 @@ public class Speler : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
         controller = GetComponent<CharacterController>();
-        //rigidBody = GetComponent<Rigidbody>();
         camera = Camera.main.transform;
  
         movementSM = new StateMachine();
@@ -53,6 +51,7 @@ public class Speler : MonoBehaviour
         jumping = new JumpingState(this, movementSM);
         crouching = new CrouchingState(this, movementSM);
         sprinting = new SprintState(this, movementSM);
+        sprintJump = new SprintJumpState(this, movementSM);
  
         movementSM.Initialize(standing);
     }

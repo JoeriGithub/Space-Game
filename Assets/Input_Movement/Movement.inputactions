@@ -188,7 +188,7 @@
                     "name": "",
                     "id": "33f92191-63c3-401b-aafd-88fac3469335",
                     "path": "<Keyboard>/shift",
-                    "interactions": "Press(behavior=2)",
+                    "interactions": "Press",
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "Sprint",

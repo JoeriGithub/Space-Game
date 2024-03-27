@@ -3,6 +3,7 @@ using UnityEngine;
 public class SprintState : State
 {
     bool sprint;
+    bool jump;
     float moveSpeed = 10;
     float gravityValue;
     
@@ -22,6 +23,7 @@ public class SprintState : State
         base.Enter();
  
         sprint = false;
+        jump = false;
         input = Vector2.zero;       
     }
  
@@ -30,6 +32,10 @@ public class SprintState : State
         base.HandleInput();
         input = moveAction.ReadValue<Vector2>();
 
+        if (jumpAction.triggered)
+        {
+            jump = true;
+        }
         if (sprintAction.triggered)
         {
             sprint = false;
@@ -51,6 +57,10 @@ public class SprintState : State
         if (!sprint)
         {
             stateMachine.ChangeState(character.moving);
+        }
+        if (jump)
+        {
+            stateMachine.ChangeState(character.sprintJump);
         }
     }
  

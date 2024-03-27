@@ -5,6 +5,7 @@ public class IdleState : State
       
     bool crouch;
     bool move;
+    bool jump;
  
     public IdleState(Speler _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -16,6 +17,7 @@ public class IdleState : State
     {
         base.Enter();
  
+        jump = false;
         crouch = false;
         move = false;  
     }
@@ -32,6 +34,10 @@ public class IdleState : State
         {
             move = true;
         }
+        if (jumpAction.triggered)
+        {
+            jump = true;
+        }
     }
  
     public override void LogicUpdate()
@@ -46,7 +52,10 @@ public class IdleState : State
         {
             stateMachine.ChangeState(character.moving);
         }
-        
+        if (jump)
+        {
+            stateMachine.ChangeState(character.jumping);
+        }
     }
  
     public override void PhysicsUpdate()
