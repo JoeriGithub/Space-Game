@@ -3,8 +3,9 @@ using UnityEngine;
 public class MovingState : State
 {
     bool jump;
+    bool grounded;
     bool sprint;
-    float moveSpeed = 5;
+    float moveSpeed = 350;
     float gravityValue;
     
     private Quaternion lookRotation;
@@ -24,6 +25,7 @@ public class MovingState : State
 
         jump = false;
         sprint = false;
+        grounded = false;
         input = Vector2.zero;
     }
  
@@ -53,15 +55,15 @@ public class MovingState : State
     {
         base.LogicUpdate();
  
-        if (sprint)
+        if (sprint && grounded)
         {
             stateMachine.ChangeState(character.sprinting);
         }    
-        if (jump)
+        if (jump && grounded)
         {
             stateMachine.ChangeState(character.jumping);
         }
-        if (input == Vector2.zero) 
+        if (input == Vector2.zero && grounded) 
         {
             stateMachine.ChangeState(character.standing);
         }
@@ -74,12 +76,14 @@ public class MovingState : State
         gravityVelocity.y += gravityValue * Time.deltaTime;
 
         currentVelocity = Vector3.SmoothDamp(currentVelocity, velocity,ref cVelocity, character.velocityDampTime);
-        character.controller.Move(currentVelocity * Time.deltaTime * moveSpeed + gravityVelocity * Time.deltaTime);
+        character.controller.SimpleMove(currentVelocity * Time.deltaTime * moveSpeed + gravityVelocity * Time.deltaTime);
   
         if (velocity.sqrMagnitude>0)
         {
             character.transform.rotation = Quaternion.Slerp(character.transform.rotation, Quaternion.LookRotation(velocity),character.rotationDampTime);
         }
+
+        grounded = character.controller.isGrounded;
     }
  
     public override void Exit()

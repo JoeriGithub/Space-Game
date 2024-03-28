@@ -4,13 +4,9 @@ using UnityEngine.InputSystem;
 public class Speler : MonoBehaviour
 {
  
-    [SerializeField]
-    public CapsuleCollider staan;
-    [SerializeField]
-    public CapsuleCollider crouch;
-
     public float playerSpeed = 5.0f;
     public float jumpHeight = 0.8f;
+    public float crouchColliderHeight = 1.35f;
 
     public StateMachine movementSM;
     public IdleState standing;
@@ -26,7 +22,9 @@ public class Speler : MonoBehaviour
     public float rotationDampTime = 0.2f;
     [Range(0, 1)]
     public float airControl = 0.5f;
- 
+
+    [HideInInspector]
+    public float normalColliderHeight;
     [HideInInspector]
     public PlayerInput playerInput;
     [HideInInspector]
@@ -54,6 +52,8 @@ public class Speler : MonoBehaviour
         sprintJump = new SprintJumpState(this, movementSM);
  
         movementSM.Initialize(standing);
+
+        normalColliderHeight = controller.height;
     }
  
     private void Update()

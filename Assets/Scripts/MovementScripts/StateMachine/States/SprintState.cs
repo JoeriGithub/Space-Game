@@ -4,7 +4,7 @@ public class SprintState : State
 {
     bool sprint;
     bool jump;
-    float moveSpeed = 10;
+    float moveSpeed = 500;
     float gravityValue;
     
     private Quaternion lookRotation;
@@ -71,7 +71,7 @@ public class SprintState : State
         gravityVelocity.y += gravityValue * Time.deltaTime;
 
         currentVelocity = Vector3.SmoothDamp(currentVelocity, velocity,ref cVelocity, character.velocityDampTime);
-        character.controller.Move(currentVelocity * Time.deltaTime * moveSpeed + gravityVelocity * Time.deltaTime);
+        character.controller.SimpleMove(currentVelocity * Time.deltaTime * moveSpeed + gravityVelocity * Time.deltaTime);
   
         if (velocity.sqrMagnitude>0)
         {

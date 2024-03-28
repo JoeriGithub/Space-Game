@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 5088009816873139270}
   - component: {fileID: 2773744493857465952}
   - component: {fileID: 8162055961368637061}
-  - component: {fileID: 2643592715614192473}
-  - component: {fileID: 2000078901045319545}
   - component: {fileID: 7100576415829214235}
   - component: {fileID: 6056115642622992161}
   m_Layer: 0
@@ -118,52 +116,6 @@ MonoBehaviour:
   m_DefaultActionMap: Movement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!136 &2643592715614192473
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702553211342310294}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!136 &2000078901045319545
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8702553211342310294}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7100576415829214235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,13 +128,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c1a9e9bd056394397c22804eff641e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  staan: {fileID: 2643592715614192473}
-  crouch: {fileID: 2000078901045319545}
   playerSpeed: 5
   jumpHeight: 0.8
+  crouchColliderHeight: 1.35
   velocityDampTime: 0.9
   rotationDampTime: 0.2
   airControl: 0.5
+  normalColliderHeight: 0
   playerInput: {fileID: 0}
   controller: {fileID: 0}
   camera: {fileID: 0}
