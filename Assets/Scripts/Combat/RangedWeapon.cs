@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class Combat : MonoBehaviour
+public class RangedWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject BulletPrefab; // Reference to the small block Prefab
     [SerializeField] private Transform launchPoint; // Transform representing the launch position of the small block
@@ -43,5 +44,10 @@ public class Combat : MonoBehaviour
         yield return new WaitForSeconds(reloadTime); // Wait for reload time
         currentAmmo = magazineSize; // Refill magazine
         isReloading = false; // Set reloading flag to false
+    }
+
+    internal static void OnFire()
+    {
+        throw new NotImplementedException();
     }
 }

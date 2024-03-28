@@ -5,6 +5,7 @@ public class IdleState : State
       
     bool crouch;
     bool move;
+    bool fire;
  
     public IdleState(Speler _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -32,6 +33,10 @@ public class IdleState : State
         {
             move = true;
         }
+        if (fireAction.triggered)
+        {
+            fire = true;
+        }
     }
  
     public override void LogicUpdate()
@@ -46,7 +51,10 @@ public class IdleState : State
         {
             stateMachine.ChangeState(character.moving);
         }
-        
+        if (fire)
+        {
+            stateMachine.ChangeState(character.firing);
+        }
     }
  
     public override void PhysicsUpdate()
