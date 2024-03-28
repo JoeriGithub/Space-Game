@@ -1,7 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
  
-public class State
+public class State 
 {
     public Speler character;
     public StateMachine stateMachine;
@@ -16,6 +17,7 @@ public class State
     public InputAction crouchAction;
     public InputAction sprintAction;
     public InputAction lookAction;
+    public InputAction fireAction;
  
     public State(Speler _character, StateMachine _stateMachine)
     {
@@ -27,6 +29,7 @@ public class State
         crouchAction = character.playerInput.actions["Crouch"];
         sprintAction = character.playerInput.actions["Sprint"];
         lookAction = character.playerInput.actions["Look"];
+        fireAction = character.playerInput.actions["Fire"];
     }
  
     public virtual void Enter()
