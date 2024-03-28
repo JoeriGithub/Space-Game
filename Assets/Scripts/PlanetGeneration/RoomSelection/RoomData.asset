@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3913dec12db37894e988a827e04d2ff0, type: 3}
+  m_Name: RoomData
+  m_EditorClassIdentifier: 
+  tiles:
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
+  - hasDoorNorth: 0
+    hasDoorEast: 0
+    hasDoorSouth: 0
+    hasDoorWest: 0
+    isRoomTile: 0
