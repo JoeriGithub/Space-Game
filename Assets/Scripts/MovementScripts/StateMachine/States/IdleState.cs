@@ -18,7 +18,8 @@ public class IdleState : State
         base.Enter();
  
         crouch = false;
-        move = false;  
+        move = false; 
+        fire = false;
     }
  
     public override void HandleInput()

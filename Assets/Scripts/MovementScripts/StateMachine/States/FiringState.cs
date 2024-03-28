@@ -12,6 +12,8 @@ public class FiringState : State
     private int currentAmmo;
     private bool isReloading;
 
+    bool fired;
+
     public FiringState(Speler _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
         character = _character;
@@ -22,12 +24,14 @@ public class FiringState : State
     {
         base.Enter();
         currentAmmo = magazineSize;
+        FireBullet();
     }
 
     public override void HandleInput()
     {
         base.HandleInput();
 
+        fired = true;
         if (fireAction.triggered)
         {
             if (currentAmmo > 0 && !isReloading)
@@ -43,11 +47,28 @@ public class FiringState : State
         }
     }
 
+    public override void LogicUpdate()
+    {
+        base.LogicUpdate();
+
+        if (fired)
+        {
+            stateMachine.ChangeState(character.standing);
+        }
+    }
+
+    public override void PhysicsUpdate()
+    {
+        base.PhysicsUpdate();
+        
+    }
+
     private void FireBullet()
     {
         GameObject bullet = GameObject.Instantiate(bulletPrefab, launchPoint.position, launchPoint.rotation);
         bullet.GetComponent<Rigidbody>().AddForce(launchPoint.forward * launchForce, ForceMode.Impulse);
         currentAmmo--;
+        fired = true;
     }
 
     IEnumerator Reload()
